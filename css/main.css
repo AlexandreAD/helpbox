@@ -25,7 +25,15 @@
   src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
 }
 
+@font-face {
+  font-family: Nunito-SemiBold;
+  src: url('../fonts/nunito/Nunito-SemiBold.ttf'); 
+}
 
+@font-face {
+  font-family: Nunito-Regular;
+  src: url('../fonts/nunito/Nunito-Regular.ttf'); 
+}
 
 
 /*//////////////////////////////////////////////////////////////////
@@ -39,7 +47,7 @@
 
 .txt2 {
   font-family: Poppins-Regular;
-  font-size: 13px;
+  font-size: 20px;
   color: #333333;
   line-height: 1.5;
 }
@@ -72,7 +80,7 @@
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  padding: 40px;
+  padding: 25px;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-column-gap: 40px;
@@ -85,6 +93,33 @@
   -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+/*------------------------------------------------------------------
+[ Imagem ]*/
+
+.container-img {
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0 auto ;
+  margin-bottom: 25px;
+}
+.legenda {
+text-align: center;
+padding: 10px 20px;
+}
+.legenda p{
+  font-family: Nunito-SemiBold;
+  font-size: 20px;
+  color: #333333;
+  }
+
+.img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  width: 50%;
+}
 
 /*------------------------------------------------------------------
 [ Form ]*/
@@ -101,8 +136,8 @@
   font-size: 60px;
 }
 .form-label{
-  font-family: Poppins-Regular;
-  font-size: 15px;
+  font-family: Nunito-Regular;
+  font-size: 16px;
   color: #999999;
 }
 
@@ -122,10 +157,11 @@
   position: relative;
   border-bottom: 2px solid #adadad;
   margin-bottom: 37px;
+  text-align: center;
 }
 
 .input100 {
-  font-family: Poppins-Regular;
+  font-family: Nunito-Regular;
   font-size: 15px;
   text-align: center;
   color: #555555;
@@ -164,6 +200,11 @@ input[type=number] {
   padding: 10px;
  
 }
+
+.wrap-resultado p {
+  font-family: Nunito-Regular;
+
+}
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
@@ -178,72 +219,3 @@ input[type=number] {
 }
 
 
-
-/*------------------------------------------------------------------
-[ Alert validate ]*/
-
-.validate-input {
-  position: relative;
-}
-
-.alert-validate::before {
-  content: attr(data-validate);
-  position: absolute;
-  max-width: 70%;
-  background-color: #fff;
-  border: 1px solid #c80000;
-  border-radius: 2px;
-  padding: 4px 25px 4px 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 0px;
-  pointer-events: none;
-
-  font-family: Poppins-Regular;
-  color: #c80000;
-  font-size: 13px;
-  line-height: 1.4;
-  text-align: left;
-
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-
-.alert-validate::after {
-  content: "\f06a";
-  font-family: FontAwesome;
-  font-size: 16px;
-  color: #c80000;
-
-  display: block;
-  position: absolute;
-  background-color: #fff;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 5px;
-}
-
-.alert-validate:hover:before {
-  visibility: visible;
-  opacity: 1;
-}
-
-@media (max-width: 992px) {
-  .alert-validate::before {
-    visibility: visible;
-    opacity: 1;
-  }
-}
