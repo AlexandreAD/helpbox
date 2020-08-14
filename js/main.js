@@ -51,6 +51,10 @@
             $("#area-B").html ((((chapaL + 63) * (chapaC + 17)) * (10**-6)).toFixed(3) + " m2");
             $("#area-C").html ((((chapaL + 82) * (chapaC + 24)) * (10**-6)).toFixed(3) + " m2");
             $("#area-BC").html ((((chapaL + 128) * (chapaC + 45)) * (10**-6)).toFixed(3) + " m2");
+           
+            $("#refile").html ("* Chapa com refile (30mm).");
+           
+           
        }else {
         $( ".wrap-resultado span").html("");
        };   
