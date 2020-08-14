@@ -42,15 +42,15 @@
 
        if (!isNaN(comp) && comp > 0 && !isNaN(larg) && larg > 0 && !isNaN(alt) && alt > 0){
 
-            $("#chapa-B").html ((chapaL + 63) + " x " + (chapaC + 17));
-            $("#chapa-C").html ((chapaL + 82) + " x " + (chapaC + 24));
-            $("#chapa-BC").html ((chapaL + 128) + " x " + (chapaC + 45));
+            $("#chapa-B").html ((chapaL + 63 + 30) + " x " + (chapaC + 17 + 30));
+            $("#chapa-C").html ((chapaL + 82 + 30) + " x " + (chapaC + 24 + 30));
+            $("#chapa-BC").html ((chapaL + 128 + 30) + " x " + (chapaC + 45 + 30));
 
             $(".arranjo").html ("1 x 1");
 
-            $("#area-B").html ((((chapaL + 63) * (chapaC + 17)) * (10**-6)).toFixed(3) + " m2");
-            $("#area-C").html ((((chapaL + 82) * (chapaC + 24)) * (10**-6)).toFixed(3) + " m2");
-            $("#area-BC").html ((((chapaL + 128) * (chapaC + 45)) * (10**-6)).toFixed(3) + " m2");
+            $("#area-B").html ((((chapaL + 63 + 30) * (chapaC + 17 + 30) * (10**-6)).toFixed(3) + " m2");
+            $("#area-C").html ((((chapaL + 82 + 30) * (chapaC + 24 + 30)) * (10**-6)).toFixed(3) + " m2");
+            $("#area-BC").html ((((chapaL + 128 + 30) * (chapaC + 45 + 30)) * (10**-6)).toFixed(3) + " m2");
 
             $("#refile").html ("* Chapa com refile (15mm).");
 
