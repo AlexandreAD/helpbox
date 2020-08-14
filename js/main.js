@@ -48,7 +48,7 @@
 
             $(".arranjo").html ("1 x 1");
 
-            $("#area-B").html ((((chapaL + 93) * (chapaC + 47) * (10**-6)).toFixed(3) + " m2");
+            $("#area-B").html ((((chapaL + 93) * (chapaC + 47)) * (10**-6)).toFixed(3) + " m2");
             $("#area-C").html ((((chapaL + 112) * (chapaC + 54)) * (10**-6)).toFixed(3) + " m2");
             $("#area-BC").html ((((chapaL + 158) * (chapaC + 75)) * (10**-6)).toFixed(3) + " m2");
 
