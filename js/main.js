@@ -46,9 +46,11 @@
             $("#chapa-C").html ((chapaL + 82) + " x " + (chapaC + 24));
             $("#chapa-BC").html ((chapaL + 128) + " x " + (chapaC + 45));
 
-            $("#area-B").html ((((chapaL + 63) * (chapaC + 17)) * (10**-6)).toFixed(2) + " m2");
-            $("#area-C").html ((((chapaL + 82) * (chapaC + 24)) * (10**-6)).toFixed(2) + " m2");
-            $("#area-BC").html ((((chapaL + 128) * (chapaC + 45)) * (10**-6)).toFixed(2) + " m2");
+            $(".arranjo").html ("1 x 1");
+
+            $("#area-B").html ((((chapaL + 63) * (chapaC + 17)) * (10**-6)).toFixed(3) + " m2");
+            $("#area-C").html ((((chapaL + 82) * (chapaC + 24)) * (10**-6)).toFixed(3) + " m2");
+            $("#area-BC").html ((((chapaL + 128) * (chapaC + 45)) * (10**-6)).toFixed(3) + " m2");
        }else {
         $( ".wrap-resultado span").html("");
        };   
