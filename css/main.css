@@ -35,6 +35,11 @@
   src: url('../fonts/nunito/Nunito-Regular.ttf'); 
 }
 
+@font-face {
+  font-family: FrederickatheGreat-Regular;
+  src: url('../fonts/Frederickathe/FrederickatheGreat-Regular.ttf'); 
+}
+
 
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
@@ -63,7 +68,7 @@
 
 .container-login100 {
   width: 100%;
-  height: 100vh;
+  height: 100vh 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -94,14 +99,32 @@
   -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+.compartilhar{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+}
+.compartilhar a{
+  margin: 5px;
+}
+
+.box-title{
+position: fixed;
+width: 200px;
+top: 50%;
+transform: translate(0, -50%);
+}
 /*------------------------------------------------------------------
 [ Imagem ]*/
 
 .container-img {
-  width: 50%;
+  width: 100%;
+  height: 250px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 0 auto ;
+  
   margin-bottom: 25px;
 }
 .legenda {
@@ -119,7 +142,9 @@ padding: 10px 20px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 20px;
-  width: 50%;
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: fill;
 }
 
 /*------------------------------------------------------------------
@@ -127,15 +152,13 @@ padding: 10px 20px;
 
 .form-title {
   display: block;
-  font-family: Poppins-Bold;
-  font-size: 30px;
+  font-family: FrederickatheGreat-Regular;
+  font-size: 80px;
   color: #333333;
   line-height: 1.2;
   text-align: center;
 }
-.form-title i {
-  font-size: 60px;
-}
+
 .form-label{
   font-family: Nunito-Regular;
   font-size: 16px;
@@ -156,7 +179,7 @@ padding: 10px 20px;
 
   width: 100%;
   position: relative;
-  border-bottom: 2px solid #adadad;
+ 
   margin-bottom: 37px;
   text-align: center;
 }
@@ -197,7 +220,7 @@ input[type=number] {
   border: 1px solid #adadad;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
  
 }
 
@@ -210,6 +233,9 @@ input[type=number] {
 
 @media (max-width: 917px){
   .wrap-login100 {
+    
+    display: -webkit-box;
+    display: -moz-box;
     display: block;
   }
   .wrap-input100 {
@@ -219,6 +245,12 @@ input[type=number] {
     margin-bottom: 10px;
   }
 
+  .box-title{
+    position: relative;
+    width: 100%;
+    top: none;
+    transform: translate(0, 0);
+    }
 }
 
 @media (max-width: 679px) {
@@ -229,6 +261,10 @@ input[type=number] {
 
   .login100-form {
     display: block;
+  }
+
+  .form-title {
+    font-size: 50px;
   }
 
 }
