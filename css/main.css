@@ -270,7 +270,9 @@ input[type=number] {
   .form-title {
     font-size: 50px;
   }
-
+  .form-title p{
+    font-size: 10px;
+  }
 }
 
 

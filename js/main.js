@@ -28,8 +28,18 @@
         var comp = parseInt($('#comp').val());
         var larg = parseInt($('#larg').val());
         var alt = parseInt($('#alt').val());
+
         var chapaL = comp + (alt * 4);
         var chapaC = (larg *2 ) + (alt * 3);
+
+        var chapaLB = chapaL + 93;
+        var chapaLC = chapaL + 112;
+        var chapaLBC = chapaL + 158;
+
+        var chapaCB = chapaC + 47;
+        var chapaCC = chapaC + 54;
+        var chapaCBC = chapaC + 75;
+
     
        
         
@@ -42,17 +52,21 @@
 
        if (!isNaN(comp) && comp > 0 && !isNaN(larg) && larg > 0 && !isNaN(alt) && alt > 0){
 
-            $("#chapa-B").html ((chapaL + 93) + " x " + (chapaC + 47));
-            $("#chapa-C").html ((chapaL + 112) + " x " + (chapaC + 54));
-            $("#chapa-BC").html ((chapaL + 158) + " x " + (chapaC + 75));
+            $("#chapa-B").html (chapaLB + " x " + chapaCB);
+            $("#chapa-C").html (chapaLC + " x " + chapaCC);
+            $("#chapa-BC").html (chapaLBC + " x " + chapaCBC);
 
             $(".arranjo").html ("1 x 1");
 
-            $("#area-B").html ((((chapaL + 93) * (chapaC + 47)) * (10**-6)).toFixed(3) + " m2");
-            $("#area-C").html ((((chapaL + 112) * (chapaC + 54)) * (10**-6)).toFixed(3) + " m2");
-            $("#area-BC").html ((((chapaL + 158) * (chapaC + 75)) * (10**-6)).toFixed(3) + " m2");
+            $("#area-B").html (((chapaLB * chapaCB) * (10**-6)).toFixed(3) + " m2");
+            $("#area-C").html (((chapaLC * chapaCC) * (10**-6)).toFixed(3) + " m2");
+            $("#area-BC").html (((chapaLBC * chapaCBC) * (10**-6)).toFixed(3) + " m2");
 
-            $("#refile").html ("* Chapa com refile (15mm).");
+            $("#custo-forma-B").html ((((chapaLB * 7) + (chapaCB * 9)) * 0.09).toLocaleString('pt-br',{style: 'currency', currency: 'BRL', minimumFractionDigits:0, maximumFractionDigits: 0}));
+            $("#custo-forma-C").html ((((chapaLC * 7) + (chapaCC * 9)) * 0.09).toLocaleString('pt-br',{style: 'currency', currency: 'BRL', minimumFractionDigits:0, maximumFractionDigits: 0}));
+            $("#custo-forma-BC").html ((((chapaLBC * 7) + (chapaCBC * 9)) * 0.09).toLocaleString('pt-br',{style: 'currency', currency: 'BRL', minimumFractionDigits:0, maximumFractionDigits: 0}));
+
+            $("#refile").html ("* Chapa com refile (15mm). <br> * Custo para forma rotativa (Valor estimado. Consulte sempre seu fornecedor)");
 
        }else {
         $( ".wrap-resultado span").html("");
