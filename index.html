@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Help Box é um conjunto de ferramentas para auxiliar e informar projetistas de embalagens, representantes e clientes sobre: modelos, medidas, armazenamento, transporte e custos."/>
-    <meta name="keywords" content="embalagem, papelão, caixa, medidas, modelo de embalagens"/>
+    <meta name="description" content="Help Box é um conjunto de ferramentas para auxiliar no desenvolvimento de embalagens. Versão atual traz recursos para o modelo sedex/e-commerce. Em breve mais novidades."/>
+    <meta name="keywords" content="embalagem, papelão, caixa, fefco, abpo"/>
     <title>Help Box</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -17,13 +17,12 @@
   gtag('config', 'UA-174976101-1');
 </script>
     <!--  -->
-
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
     <div class="limiter">
@@ -48,7 +47,9 @@
                 <div class="box">
                     <span class="form-title p-b-26 box-title">
                         Help Box
+                        <p>Conjunto de ferramentas para auxiliar no desenvolvimento de embalagens. Versão atual traz recursos para o modelo sedex/e-commerce. Em breve mais novidades.</p>
                     </span>
+                    
                 </div>
                 <div>
                     <div class="container-img">
@@ -59,17 +60,17 @@
                     </div>
                     <div class="login100-form">
                         <div class="wrap-input100">
-                            <label class="form-label">Comprimento</label>
+                            <label class="form-label">Comprimento (C)</label>
                             <input class="input100" type="number" id="comp" placeholder="0">
                         </div>
 
                         <div class="wrap-input100">
-                            <label class="form-label">Largura</label>
+                            <label class="form-label">Largura (L)</label>
                             <input class="input100" type="number" id="larg" placeholder="0">
                         </div>
 
                         <div class="wrap-input100">
-                            <label class="form-label">Altura</label>
+                            <label class="form-label">Altura (A)</label>
                             <input class="input100" type="number" id="alt" placeholder="0">
                         </div>
                         
@@ -78,6 +79,7 @@
                             <p class="fs-12">Chapa (LxC) = <span id="chapa-B"></span></p>
                             <p class="fs-12">Arranjo = <span class="arranjo"></span></p>
                             <p class="fs-12">Área = <span id="area-B"></span></p>
+                            <p class="fs-12">Custo de Forma = <span id="custo-forma-B"></span></p>
                         </div>
 
                         <div class="wrap-resultado">
@@ -85,6 +87,7 @@
                             <p class="fs-12">Chapa (LxC) = <span id="chapa-C"></span></p>
                             <p class="fs-12">Arranjo = <span class="arranjo"></span></p>
                             <p class="fs-12">Área = <span id="area-C"></span></p>
+                            <p class="fs-12">Custo de Forma = <span id="custo-forma-C"></span></p>
                         </div>
 
                         <div class="wrap-resultado">
@@ -92,6 +95,7 @@
                             <p class="fs-12">Chapa (LxC) = <span id="chapa-BC"></span></p>
                             <p class="fs-12">Arranjo = <span class="arranjo"></span></p>
                             <p class="fs-12">Área = <span id="area-BC"></span></p>
+                            <p class="fs-12">Custo de Forma = <span id="custo-forma-BC"></span></p>
                         </div>
                         
                     </div>
