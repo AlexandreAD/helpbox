@@ -40,7 +40,10 @@
   src: url('../fonts/Frederickathe/FrederickatheGreat-Regular.ttf'); 
 }
 
-
+@font-face {
+  font-family: Rubik;
+  src: url('../fonts/Rubik/RubikMonoOne-Regular.ttf'); 
+}
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
@@ -164,8 +167,8 @@ padding: 10px 20px;
 
 .form-title {
   display: block;
-  font-family: FrederickatheGreat-Regular;
-  font-size: 80px;
+  font-family: Rubik;
+  font-size: 60px;
   color: #333333;
   line-height: 1.2;
   text-align: center;
